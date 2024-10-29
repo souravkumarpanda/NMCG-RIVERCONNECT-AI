@@ -1,0 +1,179 @@
+/*body, html {
+    background-size: 100% 100%;
+}
+ul li {
+    list-style-type: none;
+}
+img {
+    cursor: pointer;
+    width: 200px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.drop-zone {
+    position: absolute;
+    top: 290px;
+    right: 1000px;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    background: #878787;
+    background-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT05Dby03KPHZ-4YYc9fZttQRz2tNWT7GjJpZIPUOoGrq8nBKni";
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT05Dby03KPHZ-4YYc9fZttQRz2tNWT7GjJpZIPUOoGrq8nBKni");
+    background-color: #cccccc;
+    color: green;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+ 
+body, html {
+    background-size: 100% 100%;
+}
+
+ul li {
+    list-style-type: none;
+}
+img {
+    cursor: pointer;
+    width: 200px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+}
+.trash1 {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 100px;
+    /*align-items: center;*/
+}
+
+.drop-zone {
+    position: absolute;
+    top: 370px;
+    right: 1095px;
+    width: 118px;
+    height: 225px;
+    background-image: url("waste bin.png");
+}
+.drop-zone1 {
+    position: absolute;
+    top: 371px;
+    right: 916px;
+    width: 124px;
+    height: 225px;
+    background-image: url("recycle bin.png");
+}
+.drop-zonel1 {
+    position: absolute;
+    top: 400px;
+    right: 1153px;
+    width: 111px;
+    height: 185px;
+    background-image: url("waste1.png");
+}
+.drop-zonel2 {
+    position: absolute;
+    top: 403px;
+    right: 1034px;
+    width: 110px;
+    height: 175px;
+    background-image: url("recycle1.png");
+}
+.drop-zone2 {
+    position: absolute;
+     top: 406px;
+    right: 917px;
+    width: 109px;
+    height: 173px;
+    background-image: url("organic1.png");
+}
+
+/*.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drop-zone1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+#startBtn:hover {
+    border: buttonhighlight;
+    background: orange;
+    box-shadow: 0px 0px 1px #777;
+}
+
+#startBtn {
+    background-color: #76643bbb;
+    padding: .5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+#startBtn:hover {
+    border: none;
+    background: orange;
+    box-shadow: 0px 0px 1px #777;
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    /* Fallback color */
+    background-color: rgb(0,0,0); 
+    /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color:blanchedalmond ;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

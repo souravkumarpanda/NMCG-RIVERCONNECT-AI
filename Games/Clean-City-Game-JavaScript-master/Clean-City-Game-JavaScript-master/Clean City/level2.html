@@ -1,0 +1,165 @@
+<html>
+    <title>Clean City</title>
+    <head>
+        <link href="sample.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    
+    <body onload="hideWaste()" background="background.png" style="background-size: 50% 100%; z-index: -1;">
+        <form>
+            <div class="container" >
+
+                <label style="font: bold;font-size: xx-large; width: 30px; height: 0px;">Score: </label>
+                <label id="Score" style="font: bold;font-size: xx-large;">0</label>
+                <section style="width: 0px; height: 0px;">
+                    <input type="hidden" id="flag" name="flag" value="false">
+                    <input type="button" id="startBtn" name="startBtn" style="margin-left: 20px; margin-top: 5px" 
+                           value="START" onclick="countdown('level2');">
+                    <label id="counter" style="margin-left: 30px; margin-top: 10px"></label>
+                </section>
+
+                <section class="drop-zone"  id="waste" style="z-index:1" data-dustbinType ="waste">
+                    <input type="hidden" id="hdnDustbin" name="hdnDustbin" value="hdnDustbin">
+                </section>
+                <section class="drop-zone1" id="recycle" style="z-index:1" data-dustbinType="recycle" >
+                    <input type="hidden" id="hdnDustbin1" name="hdnDustbin1" value="hdnDustbin1">
+                </section>
+                <section style="width: 0px; height: 0px;">
+
+                    <div id="myModal" class="modal" style="width: 100%; height: 100%;padding-top: 200px; padding-left: 85px;">
+
+                        <!-- Modal content -->
+                        <div class="modal-content" style="width: 50%;">
+                            <span class="close">&times;</span>
+                            <p>About two-thirds of landfilled waste is biodegradable. 
+                                This waste rots, decomposes and produces harmful gases
+                                (Carbon Dioxide and Methane), adding to global warming...</p>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 540px; padding-left: 5px;">
+                            <img id="plate1" alt="plate1" src="mirror.png"
+                                 style="height: 40px; width: 50px" data-garbageType="waste"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 470px; padding-left: -10px;">
+                            <img id="apple1" data-garbageType="recycle" alt="can"
+                                 src="Apple.png" style="height: 40px; width: 40px"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 500px; padding-left: 0px;">
+                            <img id="can" alt="can" src="can.png" onclick="showDetails(this)"
+                                 style="height: 60px; width: 60px" data-garbageType="recycle"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 510px; padding-left: 40px">
+                            <img id="appleee" data-garbageType="recycle" alt="fishBone" 
+                                 src="appleee.png" style="height: 75px; width: 150px">
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 370px; padding-left: 0px">
+                            <img id="bottle1" data-garbageType="recycle" alt="egg"
+                                 src="egg.png" style="height: 130px; width: 130px"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 500px; padding-left: 5px;">
+                            <img id="plate1" alt="plate1" src="mirror.png"
+                                 style="height: 40px; width: 50px" data-garbageType="waste"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 470px; padding-left: 0px;">
+                            <img id="fish" alt="fish" src="fish.png" 
+                                 style="height: 40px; width: 40px" data-garbageType="recycle"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 530px; padding-left: 0px;">
+                            <img id="plate1" alt="plate1" src="iron.png"
+                                 style="height: 40px; width: 50px" data-garbageType="waste"/>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 430px; padding-left: 0px" >
+                            <img id="bottle" alt="bottle" data-garbageType="recycle" 
+                                 src="plastic bottle.png" style="height: 50px; width: 50px"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 450px; padding-left: 10px">
+                            <img id="foodCan" data-garbageType="recycle" alt="foodCan" 
+                                 src="foodCan.png" style="height: 50px; width: 40px">
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px">
+                        <li style="padding-top: 510px; padding-left: 10px">
+                            <img id="paper" alt="paper" src="paper.png"  data-garbageType="recycle"
+                                 style="height: 40px; width: 40px">
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 430px; padding-left:  -10px">
+                            <img id="banana" data-garbageType="recycle" alt="banana" 
+                                 src="shirt.png" style="height: 60px; width: 40px">
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: -10px;">
+                        <li style="padding-top: 500px; padding-left: 15px;">
+                            <img id="phone" alt="can" src="phone.png" onclick="showDetails(this)"
+                                 style="height: 60px; width: 40px" data-garbageType="waste"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="drag-trash" style="width: 0px; height: 0px;">
+                    <ul class="trash" style="width: 0px; height: 0px;">
+                        <li style="padding-top: 430px; padding-right: 10px">
+                            <img id="egg1" data-garbageType="recycle" alt="banana" 
+                                 src="egg1.png" style="height: 40px; width: 40px">
+                        </li>
+                    </ul>
+                </section>
+
+                <section  >
+                    <img id="girl" src="girl2.png" 
+                         style="height: 185px; width: 100px; margin-right:0px;margin-top: 400px;  "/>
+                </section>
+                <!--</div>-->
+            </div>
+        </form>
+    </body>
+    <script type="text/javascript" src="sample.js"></script>
+</html>
